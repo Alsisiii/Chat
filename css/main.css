@@ -1,0 +1,350 @@
+/* start global rule */
+:root {
+    --Pale-Violet: hsl(276, 100%, 81%);
+    --Moderate-Violet: hsl(276, 55%, 52%);
+    --Desaturated-Dark: hsl(271, 15%, 43%);
+    --Grayish-Blue: hsl(206, 6%, 79%);
+    --Very-Dark: hsl(271, 36%, 24%);
+    --Dark-Grayish: hsl(270, 7%, 64%);
+    /*  */
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+    /*  */
+    --White: hsl(0, 0%, 100%);
+    --Light: hsl(270, 20%, 96%);
+    --Very-Dark-Desaturated: hsl(271, 36%, 24%);
+    --Light-Magenta2: hsl(289, 100%, 72%);
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+.container {
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+/* small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* end global rules */
+
+/* start page */
+.page {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width:767px) {
+    .page {
+        height: fit-content;
+    }
+}
+
+.page::before,
+.page::after {
+    content: " ";
+    position: absolute;
+    height: 80%;
+    width: 40%;
+    z-index: -1;
+}
+
+.page::before {
+    background: var(--Light-Violet);
+    top: 0;
+    left: -12%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.page::after {
+    background-color: var(--Light);
+    bottom: 0;
+    right: -12%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+
+}
+
+@media (max-width:767px) {
+    .page::before {
+        width: 100%;
+        left: -43%;
+        border-bottom-right-radius: 45%;
+        height: 60%;
+    }
+
+    .page::after {
+        display: none;
+    }
+}
+
+.container {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+
+.container .phone {
+    height: 640px;
+    background-color: var(--Light);
+    width: 300px;
+    border: 15px solid white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px grey;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.container .phone::before {
+    content: " ";
+    height: 20px;
+    width: 107px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.container .phone .head {
+    background: linear-gradient(to right, hsl(264, 100%, 61%) 21%, hsl(293, 100%, 63%) 98%);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+    padding-bottom: 0px;
+    align-items: center;
+}
+
+.container .phone .head i:last-child {
+    color: white;
+    margin-right: 10px;
+}
+
+.container .phone .mess {
+    padding: 10px;
+    font-size: 10px;
+    color: var(--Light-Magenta2);
+    width: 145px;
+    background-color: var(--Grayish-Blue);
+    margin: 10px;
+    border-radius: 15px;
+    border-bottom-left-radius: 5px;
+}
+
+.container .phone .image2 {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.container .phone .image2 img {
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+}
+
+.container .phone .mess3 {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 5px;
+    background-color: white;
+    color: black;
+    position: relative;
+    right: -116px;
+    width: 132px;
+}
+
+.container .phone .mess4 {
+    margin-top: 25px;
+}
+
+.container .phone .head .profile {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.container .phone .head .profile i {
+    color: white;
+    margin-right: 5px;
+}
+
+.container .phone .price {
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 191px;
+    margin: 10px;
+    background: linear-gradient(to right, hsl(293, 100%, 63%) 2%, hsl(264, 100%, 61%) 90%);
+    color: white;
+    padding: 12px;
+    border-radius: 15px;
+    border-bottom-left-radius: 5px;
+    position: relative;
+}
+
+.container .phone .price::before {
+    content: " ";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.container .phone .price .mess5 {
+    margin: 0;
+    margin-left: 21px;
+}
+
+.container .phone .price span {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+form {
+    align-items: center;
+    background-color: var(--White);
+    margin: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
+}
+
+
+form input {
+    border: none;
+    position: relative;
+}
+
+form::after {
+    font-family: var(--fa-style-family-classic);
+    content: "\f054";
+    position: absolute;
+    font-weight: 900;
+    font-size: 13px;
+    background: var(--Very-Dark);
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7px;
+    justify-content: center;
+}
+
+form input [type="placeholder"] {
+    font-size: 12px;
+    padding-left: 10px;
+    color: var(--Grayish-Blue);
+}
+
+
+.container .phone .head .profile img {
+    width: 32px;
+    height: 32px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.container .phone .head .profile .image {
+    color: white;
+    margin-left: 10px;
+}
+
+.container .phone .head .profile .image .name {
+    color: white;
+    font-size: 14px;
+}
+
+.container .phone .head .profile .image .time {
+    color: var(--Grayish-Blue);
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+@media (max-width:767px) {
+    .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .container .phone {
+        margin-top: 50px;
+
+    }
+
+    .container .text {
+        text-align: center;
+    }
+}
+
+
+.container .text p {
+    width: 338px;
+    max-width: 100%;
+    line-height: 1.6;
+    color: var(--Dark-Grayish);
+}
+
+.end {
+    width: fit-content;
+    margin: 20px auto;
+    font-size: 15px;
+}
